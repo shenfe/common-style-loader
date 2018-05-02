@@ -28,5 +28,8 @@ export default function (container = 'body', options = {}) {
 
     container.appendChild(div);
 
-    return init.call(div, div, options);
+    return init.call({
+        target: div,
+        parent: container
+    }, div, options);
 };
