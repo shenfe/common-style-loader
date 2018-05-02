@@ -4,7 +4,8 @@
     "main": "index.js",
     "scripts": {
         "preinstall": "node ./pre.js",
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "test": "opener ./test/index.html"
     },
     "dependencies": {
         "camelize": "^1.0.0"
@@ -14,6 +15,7 @@
         "babel-plugin-external-helpers": "^6.22.0",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-preset-env": "^1.6.1",
+        "opener": "^1.4.3",
         "rollup": "^0.58.2",
         "rollup-plugin-babel": "^3.0.4",
         "rollup-plugin-commonjs": "^9.1.3",
