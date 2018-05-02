@@ -1,6 +1,6 @@
 # lite-component
 
-一种轻量级的前端组件开发方式。
+一种轻量级的基于约定的前端组件开发方式。
 
 每个组件既可以通过npm+git的方式版本迭代、模块化使用，又可以通过`npm run build`命令打包成独立的[umd](https://github.com/umdjs/umd)模块的js文件。
 
