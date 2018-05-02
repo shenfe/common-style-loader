@@ -4,6 +4,7 @@ const ejs = require('rollup-plugin-ejs');
 const json = require('rollup-plugin-json');
 const sass = require('rollup-plugin-sass');
 const babel = require('rollup-plugin-babel');
+const uglify = require('rollup-plugin-uglify');
 
 const moduleConfig = require('./src/config');
 
@@ -36,6 +37,10 @@ module.exports = {
 
         ejs(),
 
-        babel()
+        babel(),
+
+        uglify({
+            ie8: true
+        })
     ]
 };
