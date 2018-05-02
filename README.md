@@ -8,7 +8,7 @@
 
 在`src`目录中改写指定的`template.ejs`、`style.scss`、`init.js`、`config.json`文件。
 
-详见[README.md]('./src')。
+详见[README.md](./src)。
 
 ## 打包组件
 
