@@ -8,6 +8,6 @@ export default function (targetElement, options) {
     alert('This component DOM is ready!');
 
     targetElement.querySelector('img').addEventListener('click', function (e) {
-        alert(`hello ${options.hello}`);
+        alert(`Hello ${options.hello}!`);
     });
 };
