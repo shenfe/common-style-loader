@@ -1,1 +1,1 @@
-# common-style-loader
+# lite-component

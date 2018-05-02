@@ -1,0 +1,6 @@
+{
+    "name": "foo",
+    "data": {
+        "var1": "bar"
+    }
+}
