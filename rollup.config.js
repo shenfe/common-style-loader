@@ -2,29 +2,28 @@ const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const ejs = require('rollup-plugin-ejs');
 const json = require('rollup-plugin-json');
-const scss = require('rollup-plugin-scss');
-const buble = require('rollup-plugin-buble');
-
-const fs = require('fs');
-const path = require('path');
-
-const camelize = require('camelize');
+const sass = require('rollup-plugin-sass');
+const babel = require('rollup-plugin-babel');
 
 const moduleConfig = require('./src/config');
 
-const moduleName = (() => camelize(`module-${moduleConfig.name}`))();
+const moduleName = require('./name')(moduleConfig.name);
+
+require('./pre');
 
 module.exports = {
     input: 'index.js',
-    name: moduleName,
     output: {
         file: `dist/${moduleName}.js`,
+        name: moduleName,
         format: 'umd'
     },
     plugins: [
-        buble(),
-
         json(),
+
+        sass({
+            insert: true
+        }),
 
         resolve({
             jsnext: true,
@@ -32,9 +31,11 @@ module.exports = {
         }),
 
         commonjs({
-            include: 'node_modules/**'
+            include: ['node_modules/**', 'name.js']
         }),
 
-        ejs()
+        ejs(),
+
+        babel()
     ]
 };
