@@ -28,14 +28,16 @@ export default function (container = 'body', options = {}) {
 
     container.appendChild(div);
 
-    setTimeout(() =>
-        init.call(
-            {
-                target: div,
-                parent: container
-            },
-            div,
-            options
-        )
-    );
+    if (typeof init === 'function') {
+        setTimeout(() =>
+            init.call(
+                {
+                    target: div,
+                    parent: container
+                },
+                div,
+                options
+            )
+        );
+    }
 };
