@@ -15,11 +15,11 @@
 
 ## template
 
-组件的模板部分，使用ejs（兼容原生html）。
+组件的模板部分，使用[ejs](http://ejs.co)（兼容原生html）。
 
 ## style
 
-组件的样式部分，使用scss（兼容原生css）。
+组件的样式部分，使用[scss](https://sass-lang.com)（兼容原生css）。
 
 在打包时会在最外层加封一个组件ID选择器（详见[pre.js](../pre.js)执行过程），很大程度避免了css污染问题。
 
