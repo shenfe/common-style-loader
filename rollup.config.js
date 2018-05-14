@@ -5,6 +5,7 @@ const json = require('rollup-plugin-json');
 const sass = require('rollup-plugin-sass');
 const babel = require('rollup-plugin-babel');
 const uglify = require('rollup-plugin-uglify');
+const replace = require('rollup-plugin-replace');
 
 const moduleConfig = require('./src/config');
 
@@ -20,6 +21,10 @@ module.exports = {
         format: 'umd'
     },
     plugins: [
+        replace({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+
         json(),
 
         sass({
