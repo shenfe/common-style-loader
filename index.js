@@ -29,7 +29,7 @@ export default function (container = 'body', options = {}) {
     container.appendChild(div);
 
     if (typeof init === 'function') {
-        setTimeout(() =>
+        setTimeout(() => {
             init.call(
                 {
                     target: div,
@@ -38,6 +38,6 @@ export default function (container = 'body', options = {}) {
                 div,
                 options
             )
-        );
+        });
     }
 };
