@@ -7,5 +7,4 @@ export default function (targetElement, options) {
             ...options
         }
     });
-    debugger
 };
