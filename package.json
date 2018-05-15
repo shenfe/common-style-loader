@@ -3,7 +3,7 @@
     "private": true,
     "main": "index.js",
     "scripts": {
-        "preinstall": "node ./pre.js",
+        "install": "node ./pre.js",
         "build": "rollup -c",
         "test": "opener ./test/index.html"
     },
